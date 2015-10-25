@@ -1,25 +1,43 @@
-# README
+# Codebook
 
-As follows the instructions for running correctly the R Script
+This R script has been made entirely for academic purpose, the data set has been collected by Center for Machine Learning and Intelligent Systems from a group of 30 volunteers where ach person performed six activities wearing a smartphone on the waists using its embedded accelerometer and gyroscope.
 
-- Read the Code Book to understand the dataset transformation
-- Download and unzip the dataset from <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
-- Copy run_analysis.R to the folder that contains the train and test folders
+For information of how to run the R script, please refer to the README.md
 
-### Run the script:
-- source("run_analysis.R") 
-- DT<-run_analysis()
+### Features description:
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
 
-The R script creates the "independent_tidy_data.txt" file with te result of the excecution.
+For more information, please refer to the "README.txt", "features.txt", "features_info.txt" and "activity_labels.txt" from the original data set: <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
 
-The main function of the Script does the following
-- Reads the training and test data sets
-- Merges the training and the test sets to create one data set.
-- Extracts only the measurements on the mean and standard deviation for each measurement. 
-- Uses descriptive activity names to name the activities in the data set
-- Appropriately labels the data set with descriptive variable names. 
-- Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-- Write the tidy data set into independent_tidy_data.txt
+### Feature Selection and data set transformation
+The dataset used for the making of the tidy data set, was the obtained by merging the training and the test sets. For this the following files where used:
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+Only the measurements on the mean and standard deviation for each measurement where selected.
+
+Based on the "activity_labels.txt" file from the original data set, the values of the activity column was updated, using the following values:
+
+- 1 = "WALKING"
+
+- 2 = "WALKING_UPSTAIRS"
+
+- 3 = "WALKING_DOWNSTAIRS"
+
+- 4 = "SITTING"
+
+- 5 = "STANDING"
+
+- 6 = "LAYING"
 
 ### Resulting data
 
